@@ -1,0 +1,290 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.4 (15/5/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	a4paper,
+	%twoside,
+	twocolumn
+	]{article}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[italian]{babel}
+
+\usepackage[
+	hmarginratio=1:1,
+	top=32mm,
+	columnsep=20pt
+	]{geometry} % Document margins
+
+%-------------------------------------------------------------
+%----------------------------------------------------- FONTS -
+%-------------------------------------------------------------
+
+\linespread{1.04}
+
+\usepackage{etoolbox}
+
+\usepackage{fontspec,
+			xltxtra,
+			xunicode
+			}
+
+\defaultfontfeatures{Mapping=tex-text}
+
+\setromanfont[
+	Mapping=tex-text
+	]{Alegreya}
+
+\setsansfont[
+	Scale=MatchLowercase,
+	Mapping=tex-text,
+	% LetterSpace=3.0,
+	% Scale=0.707,
+	]{Fira Sans}
+
+\setmonofont[]{Fira Mono}
+
+\newfontfamily{\scaps}{Alegreya SC}
+
+\newfontfamily\quotefont[
+	Scale=MatchLowercase,
+	Mapping=tex-text,
+	LetterSpace=3.0,
+	%Scale=1.123,
+	]{Fira Sans}
+\AtBeginEnvironment{quote}{\quotefont\small}
+
+
+
+\usepackage{lilyglyphs}
+
+\usepackage[
+	hang,
+	small,
+	labelfont=bf,
+	up,
+	textfont=it,
+	up
+	]{caption}
+		
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{\small Ricerca, Sperimentazione e Pratica nella Scuola di Musica Elettronica di Roma} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Ricerca, Sperimentazione e Pratica nella Scuola di Musica Elettronica di Roma} % Article title
+\author{%
+\textsc{Giuseppe Silvi}\thanks{A thank you or further information} \\[1ex] % Your name
+\normalsize Conservatorio S. Cecilia di Roma \\ % Your institution
+\normalsize \href{mailto:me@giuseppesilvi.com}{me@giuaseppesilvi.com} % Your email address
+%\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+%\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
+%\normalsize University of Utah \\ % Second author's institution
+%\normalsize \href{mailto:jane@smith.com}{jane@smith.com} % Second author's email address
+}
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+
+La Scuola di Musica Elettronica di Roma ha un ruolo didattico radicato nella tradizione elettroacustica più antica, risalente fino agli albori elettronici degli anni cinquanta. Domenico Guaccero colloca le prime pietre a fondamenta dell’attività di sperimentazione elettronica romana già negli anni tra il 1957 e 1959 quando Gino Marinuzzi Jr. fondò il primo studio attrezzato presso l’Accademia Filarmonica Romana.
+
+Questa verticalità storica non si è mai interrotta e, senza soluzione di continuità, si colloca oggi come fondamento didattico d'eccellenza che pone la scuola del Conservatorio S. Cecilia inevitabilmente in un'ottica sperimentale, di speculazione, ricerca e pratica musicale in linea con il percorso storico. 
+
+Il percorso compositivo nell'arco degli studi pone costantemente gli studenti in riflessione con il presente storico, cercando in questa continuità gli stimoli e le prospettive per la costituzione di un'individualità musicale nella piena comprensione del ruolo collettivo che ciò comporta. La produzione artistica degli studenti, soprattutto nella specializzazione biennale, vede puntualmente il conseguimento di percorsi che pongono i candidati al confronto acustico, percettivo e materico con il materiale musicale spingendolo fino alla costruzione di nuovi paradigmi strumentali ed elettroacustici. Una ricerca autonoma che fin dagli esordi è stata autonoma, mai completamente compresa dalle istituzioni e che ha dato vita a numerose associazioni di musica ancora operanti internazionalmente.
+
+In questa continuità didattico-lavorativa il ruolo dell'Istituzione Conservatorio è un partner essenziale che negli anni è stato capace, muovendosi entro il limiti tipici delle istituzioni italiane, di supportare EMUFest, il Festival di Musica Elettronica di Roma, stabilendo un legame forte tra didattica e pratica musicale nel luogo di massima fertilità del pensiero musicale, la sala da concerto.
+
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+%	\begin{flushright}
+%		\textit{Nella nostra anima c'\`e una incrinatura che, se sfiorata, \\
+%		risuona come un vaso prezioso riemerso dalle profondit\`a della terra} \\
+%		Wassilly Kandinsky - \emph{Lo Spirituale nell'Arte}
+%	\end{flushright}
+
+
+\section{Introduzione}
+
+\begin{flushright}
+\textit{
+Contemporaneo è colui \\
+che riceve in pieno viso \\
+il fascio di tenebra che \\
+proviene dal suo tempo}\footnote{Agamben}.
+\end{flushright}
+
+
+\lettrine[nindent=0em,lines=3]{È} una definizione fortemente poetica che pone la percezione in mezzo all'asse uomo-tenebra perché lega al ricevere in pieno viso il fascio di tenebra la condizione, necessaria, di accorgersene. La contemporaneità è quindi un momento mobile del tempo che identifica la facoltà di osservare l'oscurità del tempo specifico. Si può riuscire ad essere contemporanei di un pensiero del passato purché si riescano a scorgere le ombre di un'attualità contemporanea al tempo analizzato. L'osservazione può avvenire solo per distanza perché il contemporaneo, affinando la definizione con le parole di Nietzche, è intempestivo, inattuale\footnote{Appartiene veramente al suo tempo, è veramente contemporaneo colui che non coincide perfettamente con esso, non si adegua alle sue pretese ed è perciò, in questo senso, inattuale; ma proprio per questo scarto e questo anacronismo, egli è capace pi\`u degli altri di percepire ed afferrare il suo tempo.}.
+
+La capacità di analizzare il tempo attraverso le relazioni col tempo stesso, attraverso sfasature ed anacronismi, ci permette di valutare e vedere, alla dovuta distanza, spazio e tempo legati nell'istante percettivo.
+
+Il tempo del nostro repertorio è la contemporaneità, esso esige di essere contemporaneo dei testi e degli autori che esamina, obbligandoci a viaggiare nel tempo per non essere mai completamente allineati, vigili.
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\section{Le fondamenta del sapere}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\section{Pratica Musicale}
+
+Per il corso di \emph{Esecuzione ed Interpretazione della musica Elettroacustica} per il Conservatorio S. Cecilia di Roma ho voluto progettare un percorso di studio del repertorio rivolto con una certa attenzione al tema dell'\emph{ascolto}: \emph{fare repertorio nell'espressione del suo senso pi\`u completo \`e imparare ad ascoltare.}
+
+Crescere in un processo analitico-conoscitivo che amplifichi le capacità percettive, interpretando, nel significato pratico del termine, praticando. In questa direzione ho reso superfluo chiedersi \emph{perché fare repertorio} (per imparare ad ascoltare risponderemmo) ma al suo posto sorge spontaneamente la domanda \emph{come?} \emph{Come si fa repertorio?} Credo si possa fare repertorio solo ricostruendo, assemblando contesti sulle informazioni disponibili, affinch\'e la pratica poggi su una coscienza, ricostruita, che si stratifichi come pietra calcarea nel sapere sociale. Solo in questo senso il repertorio può essere, al pari della scrittura, esercizio, necessità, nutrimento della percezione.
+
+\begin{quote}
+	Alla scarsa attenzione alla problematica musicale da parte della riflessione estetica e filosofica in genere, fa riscontro - e alludo qui naturalmente in modo esclusivo alla situazione italiana - nei confronti della questione di una teoria generale della musica, disinteresse che non ha conseguenze solo su maggiori o minori profondità speculative, ma che ha generato una relativa arretratezza nel campo delle indagini pi\`u strettamente analitiche che esigono in via di principio opzioni di ordine teorico e metodico spesso apertamente confinanti nell'ambito delle questioni filosofiche [\ldots] La necessità di un punto di vista di una teoria generale si impone qui con particolare evidenza in stretta connessione con problematiche analitiche specifiche e con la consapevolezza del suo raggio di azione che raggiunge il problema della costruzione di un apparato categoriale capace di offrire strumenti per la comprensione delle strutture musicali di culture non europee, così come quello di un  rinnovamento della presentazione dei \emph{concetti fondamentali} che non può non avere conseguenze importanti nella didattica musicale. \footnote{Giovanni Piana (1991, p. 253, nota 14)}
+\end{quote}
+
+È un procedere che stratifica, solidifica conoscenza. Dopo aver studiato, letto ed interpretato \emph{Mantra} non si può tornare ad uno strato inferiore di coscienza, ad uno strato precedente di conoscenza. \emph{Mantra} si presenta come un paradigma del sapere musicale. Allo stesso tempo musicale, Cage, illumina la musica, sorride al senso del fare musica, porta l'idea di interprete ad un livello superiore, di manipolazione dell'idea, ai confini della libertà musicale e sociale, li dove spesso la mancata consapevolezza lascia smarriti e senza anima.
+
+
+\section{EMUFest}
+%%------------------------------------------------
+%
+%\section{Methods}
+%
+%Maecenas sed ultricies felis. Sed imperdiet dictum arcu a egestas. 
+%\begin{itemize}
+%\item Donec dolor arcu, rutrum id molestie in, viverra sed diam
+%\item Curabitur feugiat
+%\item turpis sed auctor facilisis
+%\item arcu eros accumsan lorem, at posuere mi diam sit amet tortor
+%\item Fusce fermentum, mi sit amet euismod rutrum
+%\item sem lorem molestie diam, iaculis aliquet sapien tortor non nisi
+%\item Pellentesque bibendum pretium aliquet
+%\end{itemize}
+%\blindtext % Dummy text
+%
+%Text requiring further explanation\footnote{Example footnote}.
+%
+%%------------------------------------------------
+%
+%\section{Results}
+%
+%\begin{table}
+%\caption{Example table}
+%\centering
+%\begin{tabular}{llr}
+%\toprule
+%\multicolumn{2}{c}{Name} \\
+%\cmidrule(r){1-2}
+%First name & Last Name & Grade \\
+%\midrule
+%John & Doe & $7.5$ \\
+%Richard & Miles & $2$ \\
+%\bottomrule
+%\end{tabular}
+%\end{table}
+%
+%\blindtext % Dummy text
+%
+%\begin{equation}
+%\label{eq:emc}
+%e = mc^2
+%\end{equation}
+%
+%\blindtext % Dummy text
+%
+%%------------------------------------------------
+%
+%\section{Discussion}
+%
+%\subsection{Subsection One}
+%
+%A statement requiring citation \cite{Figueredo:2009dg}.
+%\blindtext % Dummy text
+%
+%\subsection{Subsection Two}
+%
+%\blindtext % Dummy text
+%
+%%----------------------------------------------------------------------------------------
+%%	REFERENCE LIST
+%%----------------------------------------------------------------------------------------
+%
+%\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+%
+%\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+%Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+%\newblock Assortative pairing and life history strategy - a cross-cultural
+%  study.
+%\newblock {\em Human Nature}, 20:317--330.
+% 
+%\end{thebibliography}
+%
+%%----------------------------------------------------------------------------------------
+%
+\end{document}
