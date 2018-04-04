@@ -23,6 +23,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[
+	10pt,
 	a4paper,
 	%twoside,
 	twocolumn
@@ -30,19 +31,21 @@
 
 \usepackage{blindtext} % Package to generate dummy text throughout this template 
 
-\usepackage[sc]{mathpazo} % Use the Palatino font
+%\usepackage[sc]{mathpazo} % Use the Palatino font
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 \usepackage[utf8]{inputenc}
 
 \linespread{1.05} % Line spacing - Palatino needs more space between lines
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 
-\usepackage[italian]{babel}
+\usepackage[english,italian]{babel}
 
 \usepackage[
-	hmarginratio=1:1,
-	top=32mm,
-	columnsep=20pt
+	%hmarginratio=1:1,
+	top=20mm,
+	bottom=25mm,
+	textwidth=17.2cm,
+	columnsep=0.8cm%19pt
 	]{geometry} % Document margins
 
 %-------------------------------------------------------------
@@ -132,9 +135,9 @@
 
 \pretitle{\begin{center}\huge\bfseries} % Article title formatting
 \posttitle{\end{center}} % Article title closing formatting
-\title{Ricerca, Sperimentazione e Pratica nella Scuola di Musica Elettronica di Roma} % Article title
+\title{Ricerca, Sperimentazione e Pratica \\ nella Scuola di Musica Elettronica di Roma} % Article title
 \author{%
-\textsc{Giuseppe Silvi}\thanks{A thank you or further information} \\[1ex] % Your name
+\textsc{Giuseppe Silvi}\\[1ex]% \thanks{A thank you or further information} \\[1ex] % Your name
 \normalsize Conservatorio S. Cecilia di Roma \\ % Your institution
 \normalsize \href{mailto:me@giuseppesilvi.com}{me@giuaseppesilvi.com} % Your email address
 %\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
@@ -146,13 +149,15 @@
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
 
-La Scuola di Musica Elettronica di Roma ha un ruolo didattico radicato nella tradizione elettroacustica più antica, risalente fino agli albori elettronici degli anni cinquanta. Domenico Guaccero colloca le prime pietre a fondamenta dell’attività di sperimentazione elettronica romana già negli anni tra il 1957 e 1959 quando Gino Marinuzzi Jr. fondò il primo studio attrezzato presso l’Accademia Filarmonica Romana.
+%La Scuola di Musica Elettronica di Roma ha un ruolo didattico radicato nella tradizione elettroacustica più antica, risalente fino agli albori elettronici degli anni cinquanta. Domenico Guaccero colloca le prime pietre a fondamenta dell’attività di sperimentazione elettronica romana già negli anni tra il 1957 e 1959 quando Gino Marinuzzi Jr. fondò il primo studio attrezzato presso l’Accademia Filarmonica Romana.
+%
+%Questa verticalità storica non si è mai interrotta e, senza soluzione di continuità, si colloca oggi come fondamento didattico d'eccellenza che pone la scuola del Conservatorio S. Cecilia inevitabilmente in un'ottica sperimentale, di speculazione, ricerca e pratica musicale in linea con il percorso storico. 
+%
+%Il percorso compositivo nell'arco degli studi pone costantemente gli studenti in riflessione con il presente storico, cercando in questa continuità gli stimoli e le prospettive per la costituzione di un'individualità musicale nella piena comprensione del ruolo collettivo che ciò comporta. La produzione artistica degli studenti, soprattutto nella specializzazione biennale, vede puntualmente il conseguimento di percorsi che pongono i candidati al confronto acustico, percettivo e materico con il materiale musicale spingendolo fino alla costruzione di nuovi paradigmi strumentali ed elettroacustici. Una ricerca autonoma che fin dagli esordi è stata autonoma, mai completamente compresa dalle istituzioni e che ha dato vita a numerose associazioni di musica ancora operanti internazionalmente.
+%
+%In questa continuità didattico-lavorativa il ruolo dell'Istituzione Conservatorio è un partner essenziale che negli anni è stato capace, muovendosi entro il limiti tipici delle istituzioni italiane, di supportare EMUFest, il Festival di Musica Elettronica di Roma, stabilendo un legame forte tra didattica e pratica musicale nel luogo di massima fertilità del pensiero musicale, la sala da concerto.
 
-Questa verticalità storica non si è mai interrotta e, senza soluzione di continuità, si colloca oggi come fondamento didattico d'eccellenza che pone la scuola del Conservatorio S. Cecilia inevitabilmente in un'ottica sperimentale, di speculazione, ricerca e pratica musicale in linea con il percorso storico. 
-
-Il percorso compositivo nell'arco degli studi pone costantemente gli studenti in riflessione con il presente storico, cercando in questa continuità gli stimoli e le prospettive per la costituzione di un'individualità musicale nella piena comprensione del ruolo collettivo che ciò comporta. La produzione artistica degli studenti, soprattutto nella specializzazione biennale, vede puntualmente il conseguimento di percorsi che pongono i candidati al confronto acustico, percettivo e materico con il materiale musicale spingendolo fino alla costruzione di nuovi paradigmi strumentali ed elettroacustici. Una ricerca autonoma che fin dagli esordi è stata autonoma, mai completamente compresa dalle istituzioni e che ha dato vita a numerose associazioni di musica ancora operanti internazionalmente.
-
-In questa continuità didattico-lavorativa il ruolo dell'Istituzione Conservatorio è un partner essenziale che negli anni è stato capace, muovendosi entro il limiti tipici delle istituzioni italiane, di supportare EMUFest, il Festival di Musica Elettronica di Roma, stabilendo un legame forte tra didattica e pratica musicale nel luogo di massima fertilità del pensiero musicale, la sala da concerto.
+La Scuola di Musica Elettronica di Roma ha un ruolo didattico radicato nella tradizione elettroacustica più antica, risalente fino agli albori elettroacustici. Questa verticalità storica non si è mai interrotta e, senza soluzione di continuità, si colloca oggi come fondamento didattico d'eccellenza che pone la scuola del Conservatorio S. Cecilia inevitabilmente in un'ottica sperimentale, di speculazione, ricerca e pratica musicale in linea con il percorso storico. Il percorso didattico-compositivo nell'arco degli studi pone costantemente gli studenti in riflessione con il presente storico, cercando in questa continuità gli stimoli e le prospettive per la costituzione di un'individualità musicale nella piena comprensione del ruolo collettivo che ciò comporta. La produzione artistica degli studenti incontra puntualmente il confronto acustico, percettivo e materico con l'ascolto musicale, spingendoli verso un'autonomia completa e matura. Una ricerca autonoma non ancora supportata ed incoraggiata dalle istituzioni ma che attraverso la rete associativa privata può fare da collegamento tra lo studio ed il mondo del lavoro, come è il caso delle opere qui presentate, prodotte e realizzate al \emph{Centro Ricerche Musicali} per il festival \emph{ArteScienza}. In questa continuità didattico-lavorativa il ruolo dell'Istituzione Conservatorio è un partner essenziale che negli anni è stato capace, muovendosi entro il limiti tipici delle istituzioni italiane, di supportare \emph{EMUFest}, il \emph{Festival di Musica Elettronica di Roma}, stabilendo un legame forte tra didattica e pratica musicale nel luogo di massima fertilità del pensiero musicale che è la sala da concerto.
 
 \end{abstract}
 }
@@ -174,8 +179,46 @@ In questa continuità didattico-lavorativa il ruolo dell'Istituzione Conservator
 %		Wassilly Kandinsky - \emph{Lo Spirituale nell'Arte}
 %	\end{flushright}
 
+%\section{Appunti}
 
 \section{Introduzione}
+
+Nonostante gli avvicendamenti in cattedra e le \emph{Direzioni} massivamente diverse si può osservare nella \emph{Scuola di Musica Elettronica di Roma} una continuità che risale il tempo fino agli esordi elettronici. Gli ultimi settant'anni registrano Roma come luogo di aggregazione e nascita di Associazioni, Gruppi e Festival 
+
+Il problema è linguistico, perché con le parole comunichiamo le intenzioni. Purtroppo attualmente le intenzioni sono tutt'altro che chiare.
+
+Il problema risiede nella $ e $ congiunzione: 
+
+\begin{quote}
+Particella copulativa corrispondente al lat. et [\ldots] Serve a congiungere o coordinare due unità sintattiche congeneri: due nomi, due verbi, due avverbi, come pure due proposizioni [\ldots] Talvolta è un rafforzamento del senso della totalità, senza vero valore sintattico: \emph{tutti e tre}, \emph{bello e fatto}\ldots
+\end{quote}
+
+\emph{Musica Elettronica e Sound Design}. 
+
+\emph{Musica Elettronica e Nuove Tecnologie}. 
+
+\emph{Musica Elettronica e\ldots}. 
+
+Una totalità che non ha radici storiche in quanto anomalia linguistica.
+
+L'equivoco lo generiamo noi stessi, ogni qual volta tendiamo ad unire il diverso, accomuniamo senza il senso di comunione, ogni qual volta usiamo la $ e $ piuttosto che la $ o $
+
+\begin{quote}
+Congiunzione disgiuntiva [\ldots]  impiegata in forma semplice (\emph{prendere o lasciare}) o correlativa (\emph{o bere o affogare}), che rafforza l'opposizione fra i termini della scelta
+\end{quote}
+
+perché il problema è nella consapevolezza della scelta, nella consapevolezza di offrire $ o $ prendere una scelta. La distinzione non ha necessariamente significato qualitativo
+
+\begin{quote}
+L'opposizione può lasciare posto all'indifferenza sul piano del significato (\emph{laureato o studente non importa}) o addirittura concretarsi in equivalenza su quello del lessico (\emph{l'antropologia o studio dell'uomo})\ldots
+\end{quote}
+
+rendendo così \emph{Musica Elettronica o Sound Design} una diversità comprensibile, indagabile e, nel caso, assimilabile anche a chi non fosse completamente cosciente del significato immediato delle alternative.
+
+Durante il percorso di studi triennali ci si può rendere conto più volte di quanto questa anomalia linguistica si intrecci e provochi turbamento latente negli studenti ignari della radice del loro malessere. Il primo sintomo lo si può riscontrare agli esami di ammissione ai corsi di Musica Elettronica ($ e $ Sound Design) perché il vuoto cognitivo e di coscienza con il quale spesso si accede a questo corso non può ricevere le giuste indicazioni programmatiche in un quel tempo piccolo, ma le rimanda, nel peggiore dei casi, al primo anno di corso, dove di solito lo spaesamento causato da quella $ e $ copulativa assume finalmente grandezze fisiche. 
+
+Ci si rende conto di essere immersi nelle radici storiche di un percorso vivo solo se si è pienamente consapevoli dell'obiettivo musicale che si sta e si vuole perseguire. Solo così si può dipanare il senso di \emph{Scuola} (trovare citazione di Isidoo), Disciplina e Arte e leggerne una trama in luogo di un flusso. 
+
 
 \begin{flushright}
 \textit{
