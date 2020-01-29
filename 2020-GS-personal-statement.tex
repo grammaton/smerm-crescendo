@@ -1,0 +1,148 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = 2020-GS-personal-statement.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.4 (15/5/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	%12pt,
+	a4paper,
+	%twoside,
+	twocolumn
+	]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{Alegreya}
+
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel}
+
+\usepackage[
+	%hmarginratio=1:1,
+	top=20mm,
+	bottom=25mm,
+	textwidth=17.2cm,
+	columnsep=0.8cm%19pt
+	]{geometry} % Document margins
+
+\linespread{1.04}
+
+\usepackage{paralist}
+
+\usepackage{etoolbox}
+
+\usepackage{
+  fontspec,
+	xltxtra,
+	xunicode
+}
+
+\usepackage{
+  graphicx,
+  dblfloatfix
+}
+
+\AtBeginEnvironment{quote}{\small}
+
+\usepackage[
+	hang,
+	small,
+	labelfont=bf,
+	up,
+	textfont=it,
+	up
+	]{caption}
+
+\usepackage{titling} % Customizing the title section
+\usepackage{hyperref} % For hyperlinks in the PDF
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{\small Giuseppe Silvi • Thinking Tetrahedral Today} % Custom header text
+\fancyfoot[RO,LE]{\small w: \input{words.txt} • c: \input{char.txt} • \thepage} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Personal Statement} % Article title
+\author{%
+\textsc{Giuseppe Silvi}\\[1ex]% \thanks{A thank you or further information} \\[1ex] % Your name
+%\normalsize Conservatorio S. Cecilia di Roma \\ % Your institution
+\normalsize \href{mailto:me@giuseppesilvi.com}{grammaton@me.com} % Your email address
+%\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+%\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
+%\normalsize University of Utah \\ % Second author's institution
+%\normalsize \href{mailto:jane@smith.com}{jane@smith.com} % Second author's email address
+}
+\date{\today} % Leave empty to omit a date
+
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+
+%\noindent Short summary of the proposed project (max.100 words) including main objective, research questions, methods, and relevance to the research at RITMO.
+\noindent\input{abstract.txt}
+
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+%\raggedright
+\thispagestyle{empty}
+%----------------------------------------------------------------------------------------
+\section*{RESEARCH OUTLINE}
+Please upload a brief (1,000 words maximum) personal statement that:
+
+Explains your interest in this area
+Describes any relevant research experience - for example, as part of a previous degree
+Lists any academic work you have published or which is awaiting publication
+
+
+\end{document}

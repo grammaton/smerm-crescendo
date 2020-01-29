@@ -1,5 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
+%!TEX root = 2020-GS-thinking-tetrahedral-today.tex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Journal Article
@@ -23,17 +24,14 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[
-	12pt,
+	%12pt,
 	a4paper,
 	%twoside,
 	twocolumn
 	]{article}
 
-\usepackage{blindtext} % Package to generate dummy text throughout this template
-
-%\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{Alegreya}
 
 \linespread{1.05} % Line spacing - Palatino needs more space between lines
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
@@ -43,14 +41,10 @@
 \usepackage[
 	%hmarginratio=1:1,
 	top=20mm,
-	bottom=20mm,
+	bottom=25mm,
 	textwidth=17.2cm,
 	columnsep=0.8cm%19pt
 	]{geometry} % Document margins
-
-%-------------------------------------------------------------
-%----------------------------------------------------- FONTS -
-%-------------------------------------------------------------
 
 \linespread{1.04}
 
@@ -58,38 +52,18 @@
 
 \usepackage{etoolbox}
 
-\usepackage{fontspec,
-			xltxtra,
-			xunicode
-			}
+\usepackage{
+  fontspec,
+	xltxtra,
+	xunicode
+}
 
-\defaultfontfeatures{Mapping=tex-text}
+\usepackage{
+  graphicx,
+  dblfloatfix
+}
 
-\setromanfont[
-	Mapping=tex-text
-	]{Alegreya}
-
-\setsansfont[
-	Scale=MatchLowercase,
-	Mapping=tex-text,
-	% LetterSpace=3.0,
-	% Scale=0.707,
-	]{Fira Sans}
-
-\setmonofont[]{Fira Mono}
-
-\newfontfamily{\scaps}{Alegreya SC}
-
-\newfontfamily\quotefont[
-	Scale=MatchLowercase,
-	Mapping=tex-text,
-	LetterSpace=3.0,
-	%Scale=1.123,
-	]{Fira Sans}
-\AtBeginEnvironment{quote}{\quotefont\small}
-
-\usepackage{lilyglyphs}
-\usepackage{graphicx,dblfloatfix}
+\AtBeginEnvironment{quote}{\small}
 
 \usepackage[
 	hang,
@@ -100,9 +74,9 @@
 	up
 	]{caption}
 
+\usepackage{titling} % Customizing the title section
+\usepackage{hyperref} % For hyperlinks in the PDF
 \usepackage{booktabs} % Horizontal rules in tables
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
 
 \usepackage{enumitem} % Customized lists
 \setlist[itemize]{noitemsep} % Make itemize lists more compact
@@ -114,7 +88,7 @@
 \usepackage{titlesec} % Allows customization of titles
 \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
 \renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\section}[block]{\large\centering}{\thesection.}{1em}{} % Change the look of the section titles
 \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
 
 \usepackage{fancyhdr} % Headers and footers
@@ -122,11 +96,7 @@
 \fancyhead{} % Blank out the default header
 \fancyfoot{} % Blank out the default footer
 \fancyhead[C]{\small Giuseppe Silvi • Thinking Tetrahedral Today} % Custom header text
-\fancyfoot[RO,LE]{\thepage} % Custom footer text
-
-\usepackage{titling} % Customizing the title section
-
-\usepackage{hyperref} % For hyperlinks in the PDF
+\fancyfoot[RO,LE]{\small w: \input{words.txt} • c: \input{char.txt} • \thepage} % Custom footer text
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
@@ -136,7 +106,7 @@
 
 \pretitle{\begin{center}\huge\bfseries} % Article title formatting
 \posttitle{\end{center}} % Article title closing formatting
-\title{Thinking Tetrahedral Today \\ \large{\emph{the rhythm perception of sound-shape in a four-dimensional space}}} % Article title
+\title{Thinking Tetrahedral Today \\ \large{\emph{the sound-shape rhythm perception in a four-dimensional space}}} % Article title
 \author{%
 \textsc{Giuseppe Silvi}\\[1ex]% \thanks{A thank you or further information} \\[1ex] % Your name
 %\normalsize Conservatorio S. Cecilia di Roma \\ % Your institution
@@ -165,23 +135,16 @@
 
 \maketitle
 %\raggedright
+\thispagestyle{empty}
 %----------------------------------------------------------------------------------------
 \section*{RESEARCH OUTLINE}
-%Background and theoretical framework 
+%Background and theoretical framework
 %(Outline the theoretical foundation of your proposed research and why you have chosen this particular foundation.)
-The \emph{spectromorphology} of sounds has deep roots in the sound analysis. \cite{smalley_1997} The research seam to the possibility of integrations of this knowledge with multi-dimensional sound reproduction technologies. \cite{fellgett_75, gerzon_70a, gerzon_70b} 
+The \emph{spectromorphology} of sounds has deep roots in the sound analysis. \cite{smalley_1997} The research seam to the possibility of integrations of this knowledge with multi-dimensional sound reproduction technologies. \cite{gerzon_70a, gerzon_70b, fellgett_75, gerzon_75}
 
-Each acoustical object has a complex propagation through space. This complexity combines multiple elements in a topological shape-space relationship, like pitch (or range of pitches), intensity, duration, directivity and, most of all, the perspective point of listening. 
+Each acoustical object has a complex propagation through space. This complexity combines multiple elements in a topological shape-space relationship, like pitch (or range of pitches), intensity, duration, directivity and, most of all, the perspective point of listening.
 
 These fundamentals concepts are the most vulnerable aspects of sound in mixed music live concert. At the same time, they are the key parameters of pure magic. When the time-space relationship between sources are balanced, the listener is projected elsewhere, and we are magicians.
-
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.47\textwidth]{img/2020-01-20-14-20.jpg}
-\caption{Research outline}
-\label{outline}
-\end{figure}
 
 %----------------------------------------------------------------------------------------
 \section*{MAIN OBJECTIVE, RESEARCH \\ QUESTIONS AND HYPOTESIS}
@@ -194,34 +157,45 @@ I consider the listener as time observer, I think about music as a memory game, 
 
 The electroacoustic literature explains what the sound-shape is, mostly trough abstract conceptualizations. But it is truly observable even in the acoustic realm. It is the way we can figure the \emph{horn} sound and its differences to a \emph{bassoon} or different reverberated space around them. It is the plastic memory of the rhythm relationship.
 
-To fully investigate it, a representation of the sound-shape is required. What approach to the sound-shape analysis of an acoustical object is more efficient? The efficiency of representation is necessary to focus on the relationship between these core fundamentals and the people's way of listening. It needs to be related to the real possibility of staging and it must produce a tangible solution for live music. 
+To fully investigate it, a representation of the sound-shape is required. What approach to the sound-shape analysis of an acoustical object is more efficient? The efficiency of representation is necessary to focus on the relationship between these core fundamentals and the people's way of listening. It needs to be related to the real possibility of staging and it must produce a tangible solution for live music.
 
-Is it possible to reproduce a sound-shape and compare its electroacoustic reproduction with the acoustical one? Yes, it is possible. The simplest three dimensional solid is the tetrahedron. Through the diffusion of sound by its four faces, it is possible to obtain the simplest and more efficient sound-shape reproduction. 
+Is it possible to reproduce a sound-shape and compare its electroacoustic reproduction with the acoustical one? It could be possible. The simplest three dimensional solid is the tetrahedron. Through the diffusion of sound by its four faces, it is possible to obtain the simplest and more efficient sound-shape reproduction.
 
-What is the emotional impact of the micro-rhythm relationship amongst mixed sound-shapes during a live concert? This is the very unsolved question of my ten years personal research path. This is what I think attractive to RITMO necessity to my research and my contribution perspective. The net of facilities and sensibilities at RITMO could afford to stage of compositions thought fundamentals of this research, with precise strategies to map, to track, to analyze music written on the same core of data to be observed. The stage as half of the listening attitude. The research to seam both.
+What is the emotional impact of the micro-rhythm relationship amongst mixed sound-shapes during a live concert? This is what I think the very attractive necessity of my research and my contribution perspective to the UKRI Centre research programme. Here we define the what, how and why of time perception in music. 
 
+\vfill\null
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.37\textwidth]{img/2020-01-29-16-18_page_1}
+\caption{Research Outline: learning stage}
+\label{outline}
+\end{figure}
+
+\clearpage
 %----------------------------------------------------------------------------------------
-
 \section*{METHOD}
 
 \begin{quote}
 Music is not only about composing. It’s not artisanship, neither only a craft. Music is the thought.\footnote{Originally in Italian, present author traduction.}\cite{nono85}.
 \end{quote}
 
-Those Luigi Nono's words explain the attitude of doing music with the inexorability of perception, which involves listening and thinking, and writing and speaking and changing idea. These activities are the rhythm of composing, the topologies of a musical idea. 
+Those Luigi Nono's words explain the attitude of doing music with the inexorability of perception, which involves listening and thinking, and writing and speaking and changing idea. These activities are the rhythm of composing, the topologies of a musical idea.
 
 I wish to contribute, with my research and music, to establish a community thinking around relevant facts emerging by deep working on time fundamentals of perception. I wish my research to be open, not only in terms of the source accessibility but also as open experience accessible with listening. I wish people can sit to listen to music and I can discuss with them, stimulate their perspective to listen better.
 
-My personal knowledge is strongly focused on sound analysis. I truly understand and wish the necessity to integrate other forms of analysis I supposed to learn, counting on RITMO facilities my technique could be expanded with motion-capture and multiple videos tracking, to seam gesture and shape in a multi-dimensional view. 
+My personal knowledge is strongly focused on sound analysis. I truly understand and wish the necessity to integrate other forms of analysis I supposed to learn, counting on UKRI center facilities my technique could be expanded.
 
 The technology to be adopted will focus on open-source media, like textual code for real-time DSP and web community accessible data.
 
-%\vfill
+% We would like to invite you to submit a project proposal for a PhD on methods for artificial musicality. You can decide whether to focus on music understanding or creativity. A PhD is your opportunity to do research without the constraints of an industrial environment — we prefer fresh ideas, novel methods and careful experiments. We are a team of music information retrieval veterans and love to share our academic and industrial experience. We will work as supervisors with the successful candidate, providing technical guidance (neural networks, Bayesian networks, music signal processing) and advice on the applicability of the research to industry use cases.
+
+\vfill\null
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=.47\textwidth]{img/13556748_1807931906092757_1243460980_n.jpg}
-\caption{S.T.ONE (Spherical Tetrahedral ONE) is the result of personal research aimed at balanced music staging between acoustical objects and electro-acoustics. The project permits to exploit the sound space created by the electronic medium with perceptive characteristics similar to traditional instruments. The directions and diffusions of sound are open-software controlled. The STONE project was never presented to the community.}
+\caption{S.T.ONE (Spherical Tetrahedral ONE) is the result of personal research aimed at balanced music staging between acoustical objects and electro-acoustics. The project permits to exploit the sound space created by the electronic medium with perceptive characteristics similar to traditional instruments. The directions and diffusions of sound are open-software controlled.}
 \label{stone2}
 \end{center}
 \end{figure}
@@ -234,14 +208,14 @@ The presented research will be sliced into four stages. The first three phases w
 \begin{table}[htp]
 \begin{center}
 \begin{tabular}{ll}
-\textbf{Phases} & \textbf{Dur.} \\
+\textbf{Stages} & \textbf{Dur.} \\
 \hline
 \textbf{Omnidirectional Expositions} & 6 mo. \\
-Sound-shape analysis & \\
-Sound-shape visualizations & \\
+Sound-shape analysis and visualizations & \\
 Sound-shape reproduction & \\
+Sound-shape database design & \\
 \hline
-\textbf{Micro-Rhythm of sound-shape} & 6 mo. \\
+\textbf{Micro-Rhythm of sound-shape} & 12 mo. \\
 Solo repertoire analysis & \\
 Sound-shape explosion in practising & \\
 From literature to shapes open-data & \\
@@ -250,14 +224,14 @@ From literature to shapes open-data & \\
 Multiple sources multiple shapes & \\
 Relationship and complexity perception & \\
 \hline
-\textbf{Musical compositions} & 12 mo. \\
-UNISOLO: 4 ensembles and electronics & \\
-Sound-shape in music composition & \\
-MusicLab: unleashed opportunities & \\
-Final documentation
+\textbf{Sound-shape in musical composition} & 12 mo. \\
+AI: unleashed writing opportunities & \\
+AI: can you listen the time? & \\
+\hline
+\textbf{Final documentation} & 6 mo. \\
 \end{tabular}
 \label{timesheet}
-\caption{Thinking Tetrahedral Today phases}
+\caption{Thinking Tetrahedral Today stages}
 \end{center}
 \end{table}%
 
@@ -274,7 +248,7 @@ The first stage will produce the fundamentals of tetrahedral shape conceptualiza
 \item Collect music for virtual-reality environment
 \end{compactitem}
 
-%\vfill
+\vfill\null
 
 \begin{figure}[htbp]
 \begin{center}
@@ -284,40 +258,40 @@ The first stage will produce the fundamentals of tetrahedral shape conceptualiza
 \end{center}
 \end{figure}
 
-%\clearpage
-
-%I wish to approach to motion and video capture of the performance to build a monolithic, multi-dimensional thought of shape.
+\newpage
 
 The second stage will develop fundamentals through the analysis of acoustical behaviour of the musical instruments by timbral exploration, with the evidence of the micro-formal, time-related, explosion of shape through instrumental investigation.
 
-The third stage is about complexity perception. The sound-shape stands out in the surrounding space and expands and moves within this space, modelled by it as a soft mass inside a container. Here the phenomena of reflection occur and the shape crystallizes assuming characteristics in the function of space and, therefore, of time. The listener who takes part in this event sees a solid instrument sounds in space. S/He feels the solid shape coming from the instrumental body and from the room in terms of reflections. A ritual, the one of listening, which can not do without any of these details. This stage has a lot of unanswered questions and, I wish, even a lot of not even issued too. 
+The third stage is about complexity perception. The sound-shape stands out in the surrounding space and expands and moves within this space, modelled by it as a soft mass inside a container. Here the phenomena of reflection occur and the shape crystallizes assuming characteristics in the function of space and, therefore, of time. The listener who takes part in this event sees a solid instrument sounds in space. S/He feels the solid shape coming from the instrumental body and from the room in terms of reflections. A ritual, the one of listening, which can not do without any of these details. This stage has a lot of unanswered questions and, I wish, even a lot of not even issued too.
+
+As last stage, \emph{Unisolo} is a composition for four ensembles. Through writing it I will investigate the role of shape in a shape-informed dialogue with the listener.
+
+\raggedright
+\bibliographystyle{plain}
+\bibliography{ttt.bib}
+
+\vfill\null
+
+\newpage
+
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=.47\textwidth]{img/14597413_1128159647252783_1502048594255937536_n.jpg}
-\caption{John Chowning listening \emph{ACOUSTIC STONE}, \emph{Aumentazioni Festival}, Salerno, Italy, 2016.}
-\label{stone2}
+\caption{John Chowning listening \emph{ACOUSTIC STONE}, \\ \emph{Aumentazioni Festival}, Salerno, Italy, 2016.}
+\label{chowning}
 \end{center}
 \end{figure}
-
-%\section*{UNISOLO}
-
-As last stage, \emph{Unisolo} is a composition for four ensembles. Through writing it I will investigate the role of shape in a shape-informed dialogue with the listener. 
-%at the depth of every literature, the time
-
-%\onecolumn
-\bibliographystyle{plain}
-\bibliography{ttt.bib}
-
-~
-
-\vfill
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.47\textwidth]{img/927576_1422938657945799_34474354_n}
 \caption{Giuseppe Silvi. Composer.}
-\label{conc}
+\label{composer}
 \end{figure}
+
+~
+
+\vfill\null
 
 \end{document}
